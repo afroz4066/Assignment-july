@@ -2,10 +2,17 @@ import React from "react";
 import ambulance from "../Asests/ambulance.png";
 import care from "../Asests/care.png";
 import doctor from "../Asests/doctor.png";
+import ClinicMobile from "./ClinicMobile";
 const Clinic = () => {
   return (
     <div className=" bg-slate-50 py-12 px-4 sm:px-6 lg:px-8 ">
-      <div className="flex gap-10">
+      {/* Mobile view */}
+      <div className="block lg:hidden">
+        <ClinicMobile />
+      </div>
+
+      {/* Desktop view */}
+      <div className=" gap-10 hidden lg:flex lg:gap-10">
         <div className="max-w-3xl text-center mt-40">
           <h2 className="text-2xl font-bold tracking-tight text-[#003B79] sm:text-4xl">
             Clinic With Innovative

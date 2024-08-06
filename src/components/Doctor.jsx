@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 const data = [
   {
     title: "Dr. Awaatif Al",
@@ -21,6 +22,7 @@ const data = [
     image: "#",
   },
 ];
+
 const Doctor = () => {
   const [currentData, setCurrentData] = useState(data[0]);
 
@@ -30,27 +32,27 @@ const Doctor = () => {
 
   return (
     <div className="container mx-auto p-4 text-center">
-      <h1 className="text-3xl font-bold mb-4 text-[#003B79]">
+      <h1 className="text-3xl font-bold mb-4 text-[#003B79] md:text-4xl">
         We Have The Best Specialist
       </h1>
-      <p className="text-gray-600 mb-8 ">
+      <p className="text-gray-600 mb-8 md:text-lg">
         We have a wide experience in experience design and strategy, with
         locally-rooted knowledge.
       </p>
-      <div className="flex justify-center gap-10">
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data.map((item) => (
           <div
             key={item.title}
             onClick={() => handleClick(item)}
-            className="bg-white rounded-lg shadow-md p-4 cursor-pointer"
+            className="bg-white rounded-lg shadow-md p-4 cursor-pointer transition-transform duration-300 hover:scale-105"
           >
             <img
               src={item.image}
               alt={item.title}
-              className="w-48 h-48 mx-auto mb-4 bg-[#AED3E2] rounded-lg"
+              className="w-full h-48 object-cover mx-auto mb-4 bg-[#AED3E2] rounded-lg"
             />
-            <h2 className="text-2 font-bold mb-2">{item.title}</h2>
-            <p className="text-gray-600">{item.description}</p>
+            <h2 className="text-lg font-bold mb-2">{item.title}</h2>
+            <p className="text-gray-600 text-sm">{item.description}</p>
           </div>
         ))}
       </div>
