@@ -2,7 +2,7 @@ import React from "react";
 
 const OurServices = () => {
   return (
-    <div className="container mx-auto p-10">
+    <div className="container p-10 text-center">
       <h1 className="text-3xl font-bold text-center mb-5 text-[#003B79]">
         Our Services
       </h1>
@@ -10,7 +10,7 @@ const OurServices = () => {
         We provide the most full medical services, so every person could have
         the opportunity to receive qualitative medical help.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="flex flex-col sm:flex-row justify-center gap-16 sm:gap-8 md:gap-16">
         <div className="group bg-white rounded-lg shadow-md p-6 text-center w-72 h-48 transform transition-all duration-300 hover:bg-blue-500 hover:h-64 flex-col items-center justify-center">
           <svg
             className="svg-center"

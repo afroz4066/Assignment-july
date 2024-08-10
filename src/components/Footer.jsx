@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaFacebookF, FaTwitter, FaGoogle } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <footer className="p-6 bg-gray-100">
       <div className="flex flex-col md:flex-row justify-between items-center mb-6">
@@ -13,16 +19,16 @@ const Footer = () => {
         </h1>
         <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
           <li className="hover:text-blue-500">
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className="hover:text-blue-500">
-            <a href="#">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li className="hover:text-blue-500">
-            <a href="#">Services</a>
+            <Link to="/services">Services</Link>
           </li>
           <li className="hover:text-blue-500">
-            <a href="#">News</a>
+            <Link to="#">News</Link>
           </li>
         </ul>
       </div>

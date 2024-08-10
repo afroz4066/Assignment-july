@@ -1,24 +1,21 @@
-import "./App.css";
-import { Link } from "react-router-dom";
-import Hero from "./components/Hero.jsx";
-import OurServices from "./components/OurServices.jsx";
-import Clinic from "./components/Clinic.jsx";
-import Doctor from "./components/Doctor.jsx";
-import Testimonials from "./components/Testimonials.jsx";
-import Newsletter from "./components/Newsletter.jsx";
-import Footer from "./components/Footer.jsx";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HeroPage from "./pages/HeroPage";
+import OurservicesPage from "./pages/OurservicesPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
-    <>
-      <Hero />
-      <OurServices />
-      <Clinic />
-      <Doctor />
-      <Testimonials />
-      <Newsletter />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HeroPage />} />
+        <Route path="/services" element={<OurservicesPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        {/* <Route path="/doctor" element={<Doctor />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/newsletter" element={<Newsletter />} />
+        <Route path="/footer" element={<Footer />} /> */}
+      </Routes>
+    </Router>
   );
 }
 

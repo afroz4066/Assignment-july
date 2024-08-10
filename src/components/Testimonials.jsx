@@ -39,7 +39,7 @@ const TestimonialCard = ({ testimonial }) => {
   };
 
   return (
-    <div className="relative bg-white p-6 rounded-lg shadow-md w-80 transition-colors">
+    <div className="relative bg-white p-6 rounded-lg shadow-md w-80 hover:bg-black hover:text-white transition-colors duration-1000 ease-in-out transform ">
       <div className="absolute top-[-15px] right-[-20px] mt-4 ml-4 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center">
         &ldquo;
       </div>
