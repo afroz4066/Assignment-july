@@ -14,10 +14,13 @@ const Navbar = () => {
     <div className="sticky top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-blue-500">
-            Medi
-            <span className="text-3xl font-bold text-orange-500">Care+</span>
-          </h1>
+          <Link to="/">
+            <h1 className="text-3xl font-bold text-blue-500">
+              Medi
+              <span className="text-3xl font-bold text-orange-500">Care+</span>
+            </h1>
+          </Link>
+
           <div className="flex items-center space-x-6 lg:space-x-6">
             <ul className="hidden lg:flex space-x-6">
               <li className="hover:text-blue-500">

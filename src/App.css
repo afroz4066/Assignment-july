@@ -39,5 +39,8 @@
 .svg-center {
   display: flex;
   align-items: center;
-  margin-left: 70px;
+  margin-left: 65px;
 }
+/* .svg-center path:hover {
+  fill: red;
+} */
