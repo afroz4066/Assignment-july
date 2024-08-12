@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const ContactUsForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     mobile: "",
-
     message: "",
   });
 
@@ -17,16 +17,32 @@ const ContactUsForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+
+    try {
+      const response = await axios.post(
+        "https://assignmentbackend-khaki.vercel.app/api/contact/add-contact",
+        formData
+      );
+      console.log("Form submitted successfully:", response.data);
+      // Optionally clear form fields or show success message
+      setFormData({
+        name: "",
+        email: "",
+        mobile: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (
-    <div className=" w-auto h-[500px]">
+    <div className="w-auto h-[500px]">
       <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Form fields */}
         <div>
           <label
             htmlFor="name"
