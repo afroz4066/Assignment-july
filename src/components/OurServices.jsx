@@ -6,7 +6,7 @@ const OurServices = () => {
       <h1 className="text-3xl font-bold text-center mb-5 text-[#003B79]">
         Our Services
       </h1>
-      <p className="text-center mb-10">
+      <p className="text-center mb-10 text-lg">
         We provide the most full medical services, so every person could have
         the opportunity to receive qualitative medical help.
       </p>

@@ -6,10 +6,10 @@ const Hero = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2 lg:pr-8">
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="text-3xl font-bold mb-4">
               Welcome to MediCare+ Clinic
             </h2>
-            <h3 className="text-5xl font-bold mb-6 text-[#003B79]">
+            <h3 className="text-4xl font-bold mb-6 text-[#003B79]">
               Best Specialists
             </h3>
             <p className="text-lg mb-8">

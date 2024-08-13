@@ -1,3 +1,40 @@
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+body {
+  font-family: monospace;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.header {
+  display: flex;
+  align-items: center; /* This aligns items vertically */
+  justify-content: space-between; /* This spaces out the logo and nav items */
+}
+
+.nav-links,
+.logo {
+  margin: 0;
+  padding: 0;
+  line-height: 1; /* Adjust this if necessary */
+}
+
 .App {
   text-align: center;
 }

@@ -68,15 +68,23 @@ const ContactUsForm = () => {
           >
             Email
           </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-            required
-          />
+          <div className="mt-1 flex">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="block w-full px-3 py-2 border border-gray-300 rounded-l-md shadow-sm focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              required
+            />
+            <button
+              type="submit"
+              className="ml-3 py-2 px-4 border border-transparent rounded-r-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-sm font-medium"
+            >
+              Send Now
+            </button>
+          </div>
         </div>
 
         <div>
